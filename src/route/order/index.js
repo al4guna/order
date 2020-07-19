@@ -1,11 +1,16 @@
 const router = require('express').Router()
+const { orderController } = require('../../controller/')
+
+const createOrder = (req, res, next) => {
+	orderController.Save(req.body, res, next)
+}
+
 
 router.get('/', (req, res) => {
 	res.json({"name": "Angel Laguna"})
 })
 
-router.post('/', () => {
-	res.json({"create": "Angel"})
-})
+/* crear orden */
+router.post('/', createOrder)
 
 module.exports = router
