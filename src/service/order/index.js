@@ -12,4 +12,14 @@ const Save = (dat) => new Promise((resolve, reject) => {
 		})
 })
 
+const GetAll = () => new Promise((resolve, reject) => {
+	Order.find()
+		.then((dat) => {
+			resolve(dat)
+		})
+		.catch((reason) => {
+			reject({ statusCode: 500, message: reason.message, keyError: errorList.internalDB })
+		})
+})
 exports.Save = Save
+exports.GetAll = GetAll
