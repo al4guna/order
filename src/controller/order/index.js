@@ -13,6 +13,17 @@ const Save = async (dat, res, next) => {
 	}	
 }
 
+const GetAll = async (res, next) => {
+	try {
+		const data =  await orderS.GetAll()
+		success(res, data.map((c) => parseOrder(c)))
+	}catch(error){
+		console.log(error)
+		next(new Error(...error.keyError, error))
+	}
+}
+
 module.exports = {
-	Save
+	Save,
+	GetAll
 }
