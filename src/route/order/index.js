@@ -5,12 +5,12 @@ const createOrder = (req, res, next) => {
 	orderController.Save(req.body, res, next)
 }
 
-
-router.get('/', (req, res) => {
-	res.json({"name": "Angel Laguna"})
-})
+const getOrders = (req, res, next) => {
+	orderController.GetAll(res, next)
+}
 
 /* crear orden */
 router.post('/', createOrder)
-
+/* obtener todas las ordenes */
+router.get('/', getOrders)
 module.exports = router
