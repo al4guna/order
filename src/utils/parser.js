@@ -2,7 +2,7 @@ const parseOrder = (order) => {
 	if(order) {
 		return {
 			id: order._id,
-			chanel: order.chanel,
+			channel: order.channel,
 			state: order.state,
 			value: order.value,
 			discount: order.discount,

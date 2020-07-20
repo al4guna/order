@@ -2,7 +2,7 @@ const mongoose =  require('mongoose')
 const { Schema , model } = mongoose
 
 const orderSchema = Schema({
-	chanel: {
+	channel: {
 		type: String,
 		required: true
 	}, 
