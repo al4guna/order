@@ -9,8 +9,15 @@ const getOrders = (req, res, next) => {
 	orderController.GetAll(res, next)
 }
 
+const updateOrder = (req, res, next) => {
+	orderController.Update(req.body, res, next)
+}
+
 /* crear orden */
 router.post('/', createOrder)
 /* obtener todas las ordenes */
 router.get('/', getOrders)
+/* actualizando orden */
+router.put('/', updateOrder)
+
 module.exports = router
