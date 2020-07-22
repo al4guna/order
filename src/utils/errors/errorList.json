@@ -1,0 +1,8 @@
+{
+    "errorList": {
+        "internalDB":
+            ["DB001", 500, "Error obteniendo la informacion de la base de datos, intentelo mas tarde."],
+        "NotFoundData":
+            ["NT001", 404, "No se encuentra la informacion solicitada."]
+    }
+}
