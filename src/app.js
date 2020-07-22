@@ -11,7 +11,7 @@ app.use(express.json())
 app.use('/api', route)
 
 app.get('/', (req, res) => {
-	res.json({"servir": "funcionando"})
+	res.json({"status": "success"})
 	.status(200)
 })
 
