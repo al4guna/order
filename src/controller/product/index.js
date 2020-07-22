@@ -24,7 +24,7 @@ const GetAllByOrder = async (dat, res, next) => {
 const DeleteProduct = async (dat, res, next) => {
 	try {
 		const data = await productS.DeleteProduct(dat)
-		success(res, data)
+		success(res, parseProduct(data))
 	}catch(error) {
 		next(new Error(...error.keyError, error))
 	}
